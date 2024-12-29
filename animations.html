@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <style>
+    .new-collection{
+        text-align: center;
+        font-size: 30px;
+        position: relative;
+        }
+        .new-collection::before{
+            content:"";
+            width: 4px;
+            height:40px;
+            background-color: red;
+            position:absolute;
+            transform: translateX(-15px); 
+        }
+    .logo{
+        color:red;
+        animation-name: bounce;
+        animation-duration: 0.5s;
+        animation-iteration-count: 3;
+    }
+    @keyframes bounce{
+        0%{transform: translateY(0px);}
+        50%{transform: translateY(20px);}      
+        100%{transform: translateY(0px);}
+    }
+    .color-changing-animation{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        animation-name: change-color;
+        animation-duration: 4s;
+    }
+    
+    .multiple-color-changing-animation{
+        width: 100px;
+        height: 100px;
+        background-color: darkblue;
+        animation-name: multiple-color;
+        position: relative;
+        animation-duration:10s;
+    }
+
+    @keyframes change-color{
+        from{background-color: red; left: 0px; right: 0px;}
+        to{background-color: yellow; left: 200px; top: 0px ;}
+    }
+
+    @keyframes multiple-color{
+        0%{background-color: darkblue; left:0px; top:0px;}
+        25%{background-color: blue; left:200px; top:0px;}
+        50%{background-color: green; left:200px; top:200px;}
+        75%{background-color: pink; left:0px; top:200px;}
+        100%{background-color: black; left:0px; top:0px;}
+    }
+    </style>
+</head>
+<body>
+    <h1>color changing animation</h1>
+    <div class="color-changing-animation"></div>
+    <br>
+    <div class="multiple-color-changing-animation"></div>
+    <br>
+    <h1 class="logo">attire</h1>
+    <div class="new-collection">new collection</div>
+</html>
